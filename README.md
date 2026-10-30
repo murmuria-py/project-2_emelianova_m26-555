@@ -25,7 +25,8 @@ uv sync
 uv build
 
 # установить как глобальный CLI-инструмент
-uv tool install dist/primitive_db-0.1.0-py3-none-any.whl ```
+uv tool install dist/primitive_db-0.1.0-py3-none-any.whl
+```
 
 Если команда `database` не находится после установки, выполните
 `uv tool update-shell` и перезапустите терминал.
@@ -82,7 +83,7 @@ database
 
 ### Демонстрация
 
-[![asciicast](https://asciinema.org/a/qJpDppdPIlJTXdJD.svg)](https://asciinema.org/a/qJpDppdPIlJTXdJD)
+[demo 1](https://asciinema.org/a/qJpDppdPIlJTXdJD)
 
 ## Структура проекта
 
