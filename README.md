@@ -85,6 +85,46 @@ database
 
 [demo 1](https://asciinema.org/a/qJpDppdPIlJTXdJD)
 
+## CRUD-операции
+
+| Команда | Описание |
+|---|---|
+| `insert into <имя> values (<val1>, <val2>, ...)` | Добавить запись (ID генерируется автоматически) |
+| `select from <имя>` | Показать все записи |
+| `select from <имя> where <col> = <val>` | Показать записи по условию |
+| `update <имя> set <col> = <val> where <col> = <val>` | Обновить записи по условию |
+| `delete from <имя> where <col> = <val>` | Удалить записи по условию |
+| `info <имя>` | Информация о таблице (столбцы, кол-во записей) |
+
+### Пример
+
+```
+>>>Введите команду: insert into users values ("Sergei", 28, true)
+Запись с ID=1 успешно добавлена в таблицу "users".
+
+>>>Введите команду: select from users where age = 28
++----+--------+-----+-----------+
+| ID |  name  | age | is_active |
++----+--------+-----+-----------+
+| 1  | Sergei | 28  |    True   |
++----+--------+-----+-----------+
+
+>>>Введите команду: update users set age = 29 where name = "Sergei"
+Запись с ID=1 в таблице "users" успешно обновлена.
+
+>>>Введите команду: delete from users where ID = 1
+Запись с ID=1 успешно удалена из таблицы "users".
+
+>>>Введите команду: info users
+Таблица: users
+Столбцы: ID:int, name:str, age:int, is_active:bool
+Количество записей: 0 
+```
+
+### Демонстрация
+
+[demo 2](https://asciinema.org/a/P6iknfJfdB9Ik3qd)
+
 ## Структура проекта
 
 ```
